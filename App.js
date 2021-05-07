@@ -4,15 +4,35 @@ import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <View style={style.container}>
     {/* todays tasks  */}
+    <View style={style.tasksWrapper}>
+      <Text style={style.textTitle}>
+        todays tasks!
+      </Text>
+    <View style={style.items}>
+    {/* my tasks are going to ge here  */}
+    </View>
+    </View>
     </View>
   );
 }
 
-const styles = StyleSheet.create({
+const style = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
+   flex: 1,
+   backgroundColor: 'lightblue',
   },
+  tasksWrapper: {
+    paddingTop: 80,
+    paddingHorizontal: 20,
+  },
+  textTitle: {
+    textAlign: 'center',
+    fontSize: 24,
+    fontWeight: 'bold',
+    },
+  items: {
+
+  }
 });

@@ -1,10 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
+import {useState} from 'react'
 import { KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 import Task from './components/Task'
 
 export default function App() {
+
+  // setting up state for adding task 
+  //  use state for things that change often 
+  const [task, setTask] = useState(); 
+
+  const handleAddTask = ()=>{
+    console.log(task)
+  }
+
   return (
     <View style={style.container}>
     {/* todays tasks  */}
@@ -27,8 +37,11 @@ export default function App() {
       <TextInput 
       style={style.taskInput}
       placeholder={'write a task'}
+      value={task}
+      onChangeText={text => setTask(text)}
       />
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => handleAddTask()}
+    >
         <View style={style.addTextWrapper}>
         <Text style={style.addText}>+</Text>  
         </View>

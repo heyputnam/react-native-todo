@@ -1,12 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import {useState} from 'react'
-import { KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View, Keyboard } from 'react-native';
-
+import { KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View, Keyboard, ImageBackground } from 'react-native';
 import Task from './components/Task'
+import bgImage from './assets/blackboard-background.jpeg'
+
 
 export default function App() {
+  
 
+  
   // setting up state for adding task 
   //  use state for things that change often 
   const [task, setTask] = useState(); 
@@ -27,7 +30,9 @@ export default function App() {
   }
 
   return (
-    <View style={style.container}>
+    <ImageBackground source={bgImage} style={style.container}>
+        
+    
     {/* todays tasks  */}
     <View style={style.tasksWrapper}>
       <Text style={style.textTitle}>
@@ -67,23 +72,24 @@ export default function App() {
         </View>
       </TouchableOpacity>
     </KeyboardAvoidingView>
-    </View>
+         
+    </ImageBackground>
   );
 }
 
 const style = StyleSheet.create({
   container: {
    flex: 1,
-   backgroundColor: 'lightblue',
+   
   },
   tasksWrapper: {
     paddingTop: 80,
     paddingHorizontal: 20,
   },
   textTitle: {
-    textAlign: 'center',
     fontSize: 24,
     fontWeight: 'bold',
+    color: 'white',
     },
   items: {
     marginTop: 30
@@ -120,4 +126,9 @@ addTextWrapper:{
   borderWidth: 5
 },
 addText:{},
+image: {
+ 
+  resizeMode: 'cover',
+  justifyContent: 'center'
+}
 });

@@ -14,9 +14,16 @@ export default function App() {
 
  
   const handleAddTask = () => {
+    // when add pluss makes it go down 
     Keyboard.dismiss();
     setTaskItems([...taskItems, task])
     setTask(null);
+  }
+
+  const completeTask = (index) => {
+    let itemsCopy = [...taskItems]
+    itemsCopy.splice(index, 1)
+    setTaskItems(itemsCopy);
   }
 
   return (
@@ -32,7 +39,7 @@ export default function App() {
     {
             taskItems.map((item, index) => {
               return (
-                <TouchableOpacity key={index} >
+                <TouchableOpacity key={index} onPress ={() => completeTask(index)}>
                   <Task text={item} /> 
                 </TouchableOpacity>
               )

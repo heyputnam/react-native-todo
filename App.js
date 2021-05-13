@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import {useState} from 'react'
-import { KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View, Keyboard } from 'react-native';
 
 import Task from './components/Task'
 
@@ -10,9 +10,13 @@ export default function App() {
   // setting up state for adding task 
   //  use state for things that change often 
   const [task, setTask] = useState(); 
+  const [taskItems, setTaskItems] = useState([]);
 
-  const handleAddTask = ()=>{
-    console.log(task)
+ 
+  const handleAddTask = () => {
+    Keyboard.dismiss();
+    setTaskItems([...taskItems, task])
+    setTask(null);
   }
 
   return (
@@ -24,8 +28,17 @@ export default function App() {
       </Text>
     <View style={style.items}>
     {/* my tasks are going to ge here  */}
-    <Task />
-    <Task />
+    {/* want to loop over each taskItem in array and output them one by one */}
+    {
+            taskItems.map((item, index) => {
+              return (
+                <TouchableOpacity key={index} >
+                  <Task text={item} /> 
+                </TouchableOpacity>
+              )
+            })
+          }
+    
     </View>
     </View>
     {/* write a task code */}

@@ -16,6 +16,14 @@ Quick Remember is an easy to use todo app that list out user's todo items for th
 ### Deleting Item
 ![screenshot deleting task](./assets/remove.png)
 
+## Running App
+* install expo-cli
+* download expo-go on your smartphone
+* expo-start
+* scan qr code 
+![qr code scan example](./assets/qr.png)
+* ...and add you todo!
+
 ## Future Goals
 * Add a backend to save user's todo items
 * Add feature to add notifications for reminders 

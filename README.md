@@ -10,7 +10,7 @@ Quick Remember is an easy to use todo app that list out user's todo items for th
 
 ## Screen Shots 
 ### HomeScreen
-![homescreen](./assets/home.png)
+![homescreen](./assets/taskHome.png)
 ### Adding a ToDo item
 ![screenshot of adding task](./assets/taskAdded.png)
 ### Deleting Item

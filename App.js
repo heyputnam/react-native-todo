@@ -6,10 +6,11 @@ import Task from './components/Task'
 import bgImage from './assets/blackboard-background.jpeg'
 
 
+
+
 export default function App() {
   
-
-  
+ 
   // setting up state for adding task 
   //  use state for things that change often 
   const [task, setTask] = useState(); 
@@ -28,7 +29,7 @@ export default function App() {
     itemsCopy.splice(index, 1)
     setTaskItems(itemsCopy);
   }
-
+ 
   return (
     <ImageBackground source={bgImage} style={style.container}>
         
@@ -92,7 +93,8 @@ const style = StyleSheet.create({
     color: 'white',
     },
   items: {
-    marginTop: 30
+    marginTop: 30,
+   
   },
 writeTaskWrapper:{
   position: 'absolute',
@@ -107,7 +109,7 @@ taskInput:{
   paddingHorizontal: 15,
   backgroundColor: 'white',
   borderRadius: 50,
-  borderColor: 'pink',
+  borderColor: 'lightgrey',
   borderWidth: 5,
   width: 300,
 
@@ -119,10 +121,7 @@ addTextWrapper:{
   borderRadius: 50,
   alignItems: 'center',
   justifyContent: 'center',
-  borderRightColor: 'pink',
-  borderLeftColor: 'lightyellow',
-  borderTopColor: 'lightgreen',
-  borderBottomColor: 'tan',
+  borderColor: 'lightgrey',
   borderWidth: 5
 },
 addText:{},

@@ -1131,6 +1131,11 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@expo-google-fonts/reenie-beanie@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/reenie-beanie/-/reenie-beanie-0.1.0.tgz#aa75eb7ed22d02d16fc063acbb5b388b15f18fa5"
+  integrity sha512-8w93xP3YFGCrHbVvEelzV3HSgs3aQIY8boNkKFSA0XR/3b1FG3hTxtwuqWFWZ5frYfO0EPwUWxwVHMa6aYc95A==
+
 "@expo/config-plugins@1.0.29", "@expo/config-plugins@^1.0.18":
   version "1.0.29"
   resolved "https://registry.yarnpkg.com/@expo/config-plugins/-/config-plugins-1.0.29.tgz#fc36a7a90a08e1a67ed2c19241f4309b08e88a25"

@@ -1,23 +1,25 @@
 import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 
+const Task =(props) => {
 
-const Task = (props) => {
     return(
         <View style={style.itemContainer}>
+            
             <View style={style.itemLeft}>
              <View style={style.square}></View>
-            <Text style={style.itemText}>{props.text}</Text>
-            </View>
-            <View style={style.circle}>
+            <Text style={style.taskText}>{props.text}</Text>
+         
             </View>
         </View>
     )
-}
+    }
+
+
+
 
 const style = StyleSheet.create({
     itemContainer:{
-        backgroundColor: 'white',
         padding: 15,
         borderRadius: 10,
         flexDirection: 'row',
@@ -25,6 +27,7 @@ const style = StyleSheet.create({
         marginBottom: 20,
         justifyContent: 'space-between'
     },
+
     itemLeft: {
         flexDirection: 'row',
         alignItems: 'center',
@@ -34,7 +37,7 @@ const style = StyleSheet.create({
     square: {
         height: 24,
         width: 24,
-        backgroundColor: '#55BCf6',
+        backgroundColor: 'orange',
         opacity: 0.4,
         borderRadius: 5,
         marginRight: 10,
@@ -42,9 +45,11 @@ const style = StyleSheet.create({
 
 
     },
-    itemText: {
-        maxWidth: '80%',
-    },
+    // itemText: {
+    //     maxWidth: '80%',
+    //     fontFamily: 'ReenieBeanie_400Regular',
+        
+    // },
     circle: {
         borderRadius: 25,
         height: 10,
@@ -53,8 +58,14 @@ const style = StyleSheet.create({
         borderWidth: 2,
         borderRadius: 5,
 
+    },
+    taskText: {
+        fontSize: 26,
+        color: 'white',
+        maxWidth: '80%'
     }
 
 })
+
 
 export default Task;

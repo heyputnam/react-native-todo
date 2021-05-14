@@ -21,7 +21,7 @@ Quick Remember is an easy to use todo app that list out user's todo items for th
 * download expo-go on your smartphone
 * expo-start
 * scan qr code 
-<br>
+
 ![qr code scan example](./assets/qr.png)
 * ...and add you todo!
 
